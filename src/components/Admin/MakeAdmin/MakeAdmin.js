@@ -10,6 +10,17 @@ const MakeAdmin = () => {
     const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data =>{
+        fetch('https://arcane-ocean-22227.herokuapp.com/adminEmail', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(success => {
+                if (success) {
+                    alert('Email Added Successfully!!')
+                }
+            })
 
     }
 

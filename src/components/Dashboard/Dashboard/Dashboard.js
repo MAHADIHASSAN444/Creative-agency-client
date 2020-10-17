@@ -9,7 +9,7 @@ const Dashboard = () => {
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-6">
-                <OrderHistory></OrderHistory>
+                {/* <OrderHistory></OrderHistory> */}
             </div>
             
         </section>

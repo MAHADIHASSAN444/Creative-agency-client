@@ -9,6 +9,18 @@ const AddService = () => {
     const {name,email, photoUrl} = loggedInUser;
     const {register,handleSubmit,errors} = useForm();
     const onSubmit =data =>{
+            fetch('https://arcane-ocean-22227.herokuapp.com/addService', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(success => {
+                    if (success) {
+                        alert('Service Added Successfully!')
+                    }
+                })
+        
 
     }
     return (

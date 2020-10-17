@@ -6,7 +6,7 @@ import AllOrder from '../../ManageOrder/AllOrder/AllOrder';
 const OrderHistory = () => {
     const [order,setOrder]=useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://arcane-ocean-22227.herokuapp.com/allOrders')
         .then(res =>res.json())
         .then(data =>setOrder(data))
         

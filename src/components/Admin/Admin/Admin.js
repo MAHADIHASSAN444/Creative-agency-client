@@ -1,6 +1,8 @@
 import React from 'react';
 import Sidebar from '../../Dashboard/Dashboard/Sidebar/Sidebar';
+import AllOrder from '../../ManageOrder/AllOrder/AllOrder';
 import OrderHistory from '../OrderHistory/OrderHistory';
+
 
 const Admin = () => {
     return (
@@ -9,7 +11,7 @@ const Admin = () => {
                 <Sidebar></Sidebar>
             </div>
             <div>
-                <OrderHistory></OrderHistory>
+          <OrderHistory></OrderHistory>
             </div>
             
         </div>

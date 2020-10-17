@@ -14,6 +14,18 @@ const OrderForm = () => {
         }
     });
     const onSubmit= data =>{
+        console.log(data);
+        fetch('https://arcane-ocean-22227.herokuapp.com/addOrder', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(success => {
+                if (success) {
+                    alert('Order has been send successfully.');
+                }
+            })
         
     }
     return (

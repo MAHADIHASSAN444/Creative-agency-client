@@ -6,13 +6,27 @@ import Sidebar from '../../Dashboard/Dashboard/Sidebar/Sidebar';
 
 const PostReview = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
-    const {name,email,photoUrl}= loggedInUser;
+    const {name,email,photoURL}= loggedInUser;
     const{register,handleSubmit,errors} = useForm({
         defaultValue:{
             name:name
         }
     });
     const onSubmit= data =>{
+        data.userPhoto = photoURL;
+        console.log('gmail data', data);
+        // insert review into database
+        fetch('https://arcane-ocean-22227.herokuapp.com/addReview', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(success => {
+                if (success) {
+                    alert('Review post successfully.')
+                }
+            })
         
     }
     return (

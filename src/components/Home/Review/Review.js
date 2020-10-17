@@ -1,16 +1,21 @@
 import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 const Review = ({reviewData}) => {
     console.log(reviewData,'reviewData');
+    const{userPhoto,name, company, description} =reviewData;
+    const[loggedInUser,setLoggedInUser] =useContext(UserContext);
 
     // const {name,title,} = reviewData;
     return (
         <div className="card">
             <div className="mt-3 d-flex align-items-center">
-                <img src={reviewData.image} alt=""/>
+                <img src={userPhoto} alt=""/>
                 <div className="">
-                      <h6>{reviewData.name}</h6>
-                      <p className="m-0">{reviewData.title}</p>
+                      <h6>{name}</h6>
+                     <p className='m-0'>{company}</p>
+                      <p className="m-0">{description}</p>
                 </div>
             </div>
             <div className="card-body">
