@@ -1,5 +1,12 @@
-# Creative Agency [live link](https://creativ-agency.web.app/)
+# Creative Agency      [ See live link](https://creativ-agency.web.app/)
 ###### Complite MERN stack website. Which provide many kind of courses
 ## Technology
-##### Java Script, React.js, Node.js, Express.js, MongoDB, Bootstrap                                              
-
+##### Java Script, React.js, Node.js, Express.js, MongoDB, Bootstrap
+### Features
+##### People can select or order any servise                                           
+##### people also can see their order
+##### People can give there review 
+##### Review can see in website
+#####  Admin can add service 
+##### Admin can add other admin
+##### Admin can see orderlist
